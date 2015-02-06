@@ -6,13 +6,27 @@
 		<script type="text/javascript" src="js/javascript.js"></script>
 	</head>
 	<body>
-		<div>
+		<div class="container">
 			<p class="registro">Registra tus placas</p>
 			<input id="placas"type="text">
-			<button>ENVIAR</button>
-			<h1>DATOS DE: </h1>
-			<p class="p infracciones">INFRACCIONES: </p>
-			<p class="p verificaciones">VERIFICACIONES: </p>
-			<p class="p tenencias">TENENCIAS: </p>
+			<nav class="cl-effect-5">
+				<a href="#"><span data-hover="enviar">enviar</span></a>
+			</nav>
+			<h3 id="text">Confirma tus infracciones, verificaciones y tenencias.</h3>
+			<div id="container-data">
+				<button class="return"></button>
+				<h2>DATOS DE: </h2>
+				<div class="row">
+					<div class="col-3">
+						<p class="p infracciones">INFRACCIONES: </p>
+					</div>
+					<div class="col-3">
+						<p class="p verificaciones">VERIFICACIONES: </p>
+					</div>
+					<div class="col-3">
+						<p class="p tenencias">TENENCIAS: </p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>

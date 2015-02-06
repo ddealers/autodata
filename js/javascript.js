@@ -1,7 +1,10 @@
 $(document).on('ready',
 	function(){
-		$('button').on('click',
+		$('a').on('click',
 			function(){
+				$('#container-data').css({display:"block"});
+					TweenMax.to ('#text',1,{opacity:0});
+					TweenMax.fromTo ('#container-data',1,{y: -50, opacity:0},{y: 0, opacity:1, ease: Bounce.easeOut});
 				var placas = $('#placas').val()
 				console.log("http://datos.labplc.mx/movilidad/vehiculos/"+placas+".json");
 				$('h1').append('<span>'+placas+'</span>');
@@ -48,5 +51,10 @@ $(document).on('ready',
 						console.log (data.consulta.tenencias[i]);
 					}
 				},"jsonp");
+			});
+		$('.return').on('click',
+			function(){
+				TweenMax.fromTo ('#container-data',1,{y: 0, opacity:1},{y: -50, opacity:0, ease: Back.easeIn});
+				TweenMax.to ('#text',1,{opacity:1});
 			});
 	});

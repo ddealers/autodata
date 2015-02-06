@@ -7,12 +7,14 @@ body{
 	background-size: cover;
 	height: 100%;
 	width: 100%;
+	position: fixed;
 }
-	div{
+	div.container{
 		background: rgba(0, 0, 0, .8);
 		height: 100%;
 		width: 100%;
 		position: relative;
+		overflow: scroll;
 	}
 		p.registro{
 			text-align: center;
@@ -20,45 +22,6 @@ body{
 			padding-top: 50px;
 			font-style: italic;
 			font-size: 20px; 
-		}
-		p.p{
-			color: #fff;
-		}
-		.infracciones{
-			left: 250px;
-			top: 350px;
-			position: absolute;
-			font-family: arial;
-		}
-		.verificaciones{
-			margin: auto;
-			top: 365px;
-			left: 0;
-			right: 0;
-			position: absolute;
-			width: 100px;
-			font-family: arial;
-		}
-		.tenencias{
-			position: absolute;
-			right: 250px;
-			top: 350px;
-			font-family: arial;
-		}
-		button{
-			padding: 10px;
-			margin: auto;
-			position: absolute;
-			top: 180px;
-			left: 0;
-			right: 0;
-			width: 100px;
-			border-radius: 5px;
-			background: none;
-			border-style: none;
-			border: 1px solid #fff;
-			color: #fff;
-			outline: 0;
 		}
 		input{
 			width: 300px;
@@ -75,22 +38,146 @@ body{
 			outline: 0;
 			font-size: 20px;
 			text-align: center;
-		}
-		h1{
 			color: #fff;
-			margin-top: 200px;
-			margin-left: 100px;
-			font-family: arial;
-			font-weight: lighter;
+			background: none;
 		}
+		nav a {
+			position: relative;
+			display: inline-block;
+			margin: 15px 25px;
+			outline: none;
+			color: #fff;
+			text-decoration: none;
+			letter-spacing: 1px;
+			text-shadow: 0 0 1px rgba(255,255,255,0.3);
+			font-size: 1.35em;
+		}
+		nav a:hover,
+		nav a:focus {
+			outline: none;
+		}
+			.cl-effect-5 a {
+				overflow: hidden;
+				padding: 0px 10px;
+				position: absolute;
+				top: 160px;
+				left: 0;
+				right: 0;
+				width: 100px;
+				border-radius: 5px;
+				background: none;
+				margin: auto;
+				text-align: center;
+				font-family: 'Helvetica-light';
+				font-size: 16px;
+			}
+
+			.cl-effect-5 a span {
+				position: relative;
+				display: inline-block;
+				-webkit-transition: -webkit-transform 0.3s;
+				-moz-transition: -moz-transform 0.3s;
+				transition: transform 0.3s;
+			}
+
+			.cl-effect-5 a span::before {
+				position: absolute;
+				top: 100%;
+				content: attr(data-hover);
+				color: #A8C545;
+				-webkit-transform: translate3d(0,0,0);
+				-moz-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+			}
+
+			.cl-effect-5 a:hover span,
+			.cl-effect-5 a:focus span {
+				-webkit-transform: translateY(-100%);
+				-moz-transform: translateY(-100%);
+				transform: translateY(-100%);
+			}
+		h3#text{
+			text-align: center;
+			font-size: 30px;
+			font-family: 'Helvetica';
+			position: absolute;
+			color: #A8C545;
+			text-transform: uppercase;
+			font-weight: bold;
+			width: 500px;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			line-height: 50px;
+			height: 0;
+		}
+		div#container-data{
+			display: none;
+			position: relative;
+		}
+			p{
+				color: #A8C545;
+				line-height: 30px;
+			}
+			button.return{
+				position: absolute;
+				right: 100px;
+				width: 100px;
+				background: url(../img/tache.png)no-repeat;
+				border: none;
+				height: 89px;
+				background-size: 50px;
+				top: -170px;
+				outline: 0;
+			}
+			button.return:hover{
+				background: url(../img/tache-hover.png)no-repeat;
+				width: 100px;
+				height: 89px;
+				background-size: 50px;
+			}
+			h2{
+				color: #fff;
+				margin-top: 200px;
+				margin-left: 100px;
+				font-family: arial;
+				font-weight: lighter;
+		}
+			p.p{
+				color: #fff;
+			}
+			.infracciones{
+				left: 250px;
+				top: 350px;
+				position: absolute;
+				font-family: arial;
+			}
+			.verificaciones{
+				margin: auto;
+				top: 365px;
+				left: 0;
+				right: 0;
+				position: absolute;
+				width: 100px;
+				font-family: arial;
+			}
+			.tenencias{
+				position: absolute;
+				right: 250px;
+				top: 350px;
+				font-family: arial;
+			}
+}
 .row {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
 }
-.row .col-1 {
-  flex: 1 100%;
-}
+	.row .col-1 {
+	  flex: 1 100%;
+	}
 .row .col-2 {
   flex: 1 50%;
 }
