@@ -83,10 +83,51 @@ body{
 			font-family: arial;
 			font-weight: lighter;
 		}
-
-
-
-
-
-
-
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.row .col-1 {
+  flex: 1 100%;
+}
+.row .col-2 {
+  flex: 1 50%;
+}
+@media screen and (max-width: 700px) {
+  .row .col-2 {
+    flex: 1 100%;
+  }
+}
+.row .col-3 {
+  flex: 1 33%;
+}
+@media screen and (max-width: 700px) {
+  .row .col-3 {
+    flex: 1 100%;
+  }
+}
+.row .col-4 {
+  flex: 1 25%;
+}
+@media screen and (max-width: 700px) {
+  .row .col-4 {
+    flex: 1 100%;
+  }
+}
+.row .col-5 {
+  flex: 1 20%;
+}
+@media screen and (max-width: 700px) {
+  .row .col-5 {
+    flex: 1 100%;
+  }
+}
+.row .col-5n {
+  flex: 1 80%;
+}
+@media screen and (max-width: 700px) {
+  .row .col-5n {
+    flex: 1 100%;
+  }
+}
