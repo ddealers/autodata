@@ -1,16 +1,15 @@
 $(document).on('ready',
 	function(){
-		$('a').on('click',
+		$('a.send').on('click',
 			function(){
 				$('#container-data').css({display:"block"});
 					TweenMax.to ('#text',1,{opacity:0});
 					TweenMax.fromTo ('#container-data',1,{y: -50, opacity:0},{y: 0, opacity:1, ease: Bounce.easeOut});
 				var placas = $('#placas').val()
 				console.log("http://datos.labplc.mx/movilidad/vehiculos/"+placas+".json");
-				$('h1').append('<span>'+placas+'</span>');
+				$('h2').append('<span>'+placas+'</span>');
 				console.log('tus placas son:'+$('#placas').val());
 				$.get("http://datos.labplc.mx/movilidad/vehiculos/"+placas+".json", {},function(data){
-
 					var totalInfracciones = data.consulta.infracciones.length;
 					$('.infracciones').append('<span>'+totalInfracciones+'</span>');
 					for (var i = 0; i < totalInfracciones; i++){
@@ -54,7 +53,7 @@ $(document).on('ready',
 			});
 		$('.return').on('click',
 			function(){
-				TweenMax.fromTo ('#container-data',1,{y: 0, opacity:1},{y: -50, opacity:0, ease: Back.easeIn});
+				TweenMax.fromTo ('#container-data',.5,{y: 0, opacity:1},{y: -50, opacity:0, ease: Back.easeIn});
 				TweenMax.to ('#text',1,{opacity:1});
 			});
 	});
