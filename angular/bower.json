@@ -1,0 +1,16 @@
+{
+	"name":"calidadAire",
+	"dependencies":{
+		"angular":"latest",
+		"angular-animate":"latest",
+		"angular-material":"latest",
+		"angular-aria":"latest",
+		"angular-sanitize":"latest",
+		"jquery":"latest"
+	},
+	"ignore":[
+		"**/.*", 
+		"node_modules",
+		"bower_components"
+	]
+}
