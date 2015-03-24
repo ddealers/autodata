@@ -1,0 +1,9 @@
+{
+  "name":"Autodata",
+  "devDependecies":{
+    "http-server":"*"
+  },
+  "scripts":{
+    "start":"http-server -o --cors"
+  }
+}
